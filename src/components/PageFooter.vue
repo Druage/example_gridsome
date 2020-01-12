@@ -36,7 +36,7 @@
         padding: 32px 64px;
 
         width: 100%;
-        max-width: 1200px;
+        max-width: $max-deskop-width;
         margin: 0 auto;
         border-top: 1px solid rgba(black, .1);
 

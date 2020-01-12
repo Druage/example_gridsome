@@ -1,6 +1,9 @@
 <template>
 
     <div>
+
+        <HeaderBar/>
+
         <BlogPage/>
 
         <PageFooter/>
@@ -11,9 +14,10 @@
 <script>
     import BlogPage from "../components/BlogPage";
     import PageFooter from "../components/PageFooter";
+    import HeaderBar from "../components/HeaderBar";
 
     export default {
-        components: {PageFooter, BlogPage},
+        components: {HeaderBar, PageFooter, BlogPage},
         metaInfo: {
             title: 'Website'
         }
