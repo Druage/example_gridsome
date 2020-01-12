@@ -27,7 +27,11 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        box-sizing: border-box;
+
+        @media only screen and (max-width: $mobile-width) {
+            flex-direction: column;
+        }
+
         box-sizing: border-box;
         padding: 32px 64px;
 
@@ -41,6 +45,14 @@
             font-weight: bold;
             font-size: 1.5rem;
 
+            @media only screen and (max-width : 1100px)  {
+                width: 30%;
+            }
+
+            @media only screen and (max-width : $mobile-width)  {
+                width: auto;
+            }
+
             a {
                 border-bottom: 3px solid #CFB885;
             }
@@ -49,8 +61,16 @@
         .item {
             flex: 1;
 
+            @media only screen and (max-width : $mobile-width)  {
+                margin-top: 24px;
+            }
+
             &.last {
                 margin-left: auto;
+
+                @media only screen and (max-width : $mobile-width)  {
+                    margin-left: 0;
+                }
             }
         }
     }
