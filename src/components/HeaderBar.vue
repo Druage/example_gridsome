@@ -40,12 +40,11 @@
             margin: 0 auto;
             box-sizing: border-box;
             padding: 0 64px;
+            border-bottom: 1px solid rgba(#000, .1);
 
             display: flex;
             align-items: center;
             justify-content: flex-start;
-
-            border-bottom: 1px solid rgba(#000, .1);
 
             .social-links-container {
                 display: flex;
@@ -53,6 +52,10 @@
                 justify-content: center;
 
                 margin-left: auto;
+
+                @media only screen and (max-width: $mobile-width) {
+                    display: none;
+                }
 
                 a {
                     height: 36px;
