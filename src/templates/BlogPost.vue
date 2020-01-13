@@ -52,12 +52,10 @@
     }
 </page-query>
 
-<style scoped lang="scss">
+<style lang="scss">
 
     p {
-        padding: 0;
-
-        margin-bottom: 12px;
+        line-height: 2rem;
     }
 
     .blog-page {
@@ -70,6 +68,7 @@
 
         img {
             width: 100%;
+            height: unset;
             margin: 24px auto;
         }
 
