@@ -3,7 +3,7 @@
 
         <div class="header-container">
 
-            <a href="https://www.ghi.design/">
+            <a href="/blog">
                 <img src="@/assets/img/blog_logo.svg"/>
             </a>
 
