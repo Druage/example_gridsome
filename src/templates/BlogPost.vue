@@ -7,7 +7,7 @@
 
             <div class="blog-heading">
                 <div class="main-heading">{{ $page.blogPost.title }}</div>
-                <div class="sub-heading">Sub heading blh blah blah blahasfsa afafa</div>
+                <div class="sub-heading">{{ $page.blogPost.description }}</div>
             </div>
 
 
@@ -44,6 +44,7 @@
     query BlogPost ($path: String!) {
     blogPost (path: $path) {
     title
+    description
     date (format: "D MMMM, YYYY")
     content
     image
