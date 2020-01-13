@@ -27,7 +27,13 @@
 <style lang="scss">
 
     body {
-        color: #333333;
+        color: $primary-font-color;
+    }
+
+    a {
+        color: $primary-font-color;
+        margin: 0;
+        padding: 0;
     }
 
     .home-links a {

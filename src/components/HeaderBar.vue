@@ -2,12 +2,20 @@
     <div class="HeaderBar">
 
         <div class="header-container">
-            <img src="@/assets/img/blog_logo.svg"/>
+
+            <a href="https://www.ghi.design/">
+                <img src="@/assets/img/blog_logo.svg"/>
+            </a>
+
             <div class="social-links-container">
-                <a>H</a>
-                <a>H</a>
-                <a>H</a>
+                <a href="https://www.facebook.com/GenerationalExperts/" target="_blank">
+                    <font-awesome :icon="['fab', 'instagram']"/>
+                </a>
+                <a href="https://www.instagram.com/generational.improvement/" target="_blank">
+                    <font-awesome :icon="['fab', 'facebook']"/>
+                </a>
             </div>
+
         </div>
 
     </div>
@@ -47,10 +55,12 @@
                 margin-left: auto;
 
                 a {
-                    height: 32px;
-                    width: 32px;
+                    height: 36px;
+                    width: 36px;
                     border-radius: 50%;
                     background-color: #E3E3E3;
+
+                    font-size: 1.5rem;
 
                     display: flex;
                     align-items: center;
