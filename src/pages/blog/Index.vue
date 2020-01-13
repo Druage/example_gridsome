@@ -4,7 +4,7 @@
 
         <div class="blog-body">
 
-            <div class="BlogEntryPreview">
+            <g-link class="BlogEntryPreview" to="/blog/article-one">
                 <img src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920-800x450.jpg"/>
                 <div class="preview-text-container">
 
@@ -19,8 +19,8 @@
                     </p>
 
                 </div>
-            </div>
-            <div class="BlogEntryPreview">
+            </g-link>
+            <g-link class="BlogEntryPreview" to="/blog/article-one">
                 <img src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920-800x450.jpg"/>
                 <div class="preview-text-container">
 
@@ -35,8 +35,8 @@
                     </p>
 
                 </div>
-            </div>
-            <div class="BlogEntryPreview">
+            </g-link>
+            <g-link class="BlogEntryPreview" to="/blog/article-one">
                 <img src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920-800x450.jpg"/>
                 <div class="preview-text-container">
 
@@ -51,8 +51,8 @@
                     </p>
 
                 </div>
-            </div>
-            <div class="BlogEntryPreview">
+            </g-link>
+            <g-link class="BlogEntryPreview" to="/blog/article-one">
                 <img src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920-800x450.jpg"/>
                 <div class="preview-text-container">
 
@@ -67,7 +67,7 @@
                     </p>
 
                 </div>
-            </div>
+            </g-link>
 
         </div>
 
@@ -84,9 +84,20 @@
     }
 </script>
 
-<style scoped lang="scss">
-    .Index {
+<style lang="scss">
 
+    body {
+        color: $primary-font-color;
+    }
+
+    a {
+        color: $primary-font-color;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    .Index {
         .blog-body {
             width: 100%;
             max-width: $max-deskop-width;
@@ -106,6 +117,8 @@
         margin: 64px 0;
         padding: 24px;
         cursor: pointer;
+        color: $primary-font-color;
+        text-decoration: none;
 
         &:hover {
             background-color: rgba(black, .05);

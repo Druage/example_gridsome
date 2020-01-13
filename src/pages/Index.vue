@@ -1,12 +1,6 @@
 <template>
 
     <div>
-
-        <HeaderBar/>
-
-        <BlogPage/>
-
-        <PageFooter/>
     </div>
 
 </template>
@@ -17,7 +11,6 @@
     import HeaderBar from "../components/HeaderBar";
 
     export default {
-        components: {HeaderBar, PageFooter, BlogPage},
         metaInfo: {
             title: 'Website'
         }
@@ -35,9 +28,5 @@
         margin: 0;
         padding: 0;
         text-decoration: none;
-    }
-
-    .home-links a {
-        margin-right: 1rem;
     }
 </style>
