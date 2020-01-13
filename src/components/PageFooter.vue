@@ -3,7 +3,7 @@
     <footer>
 
         <div class="website-name">
-            <a>GHI</a>
+            <a href="https://www.ghi.design/">GHI</a>
         </div>
         <a class="item">About</a>
         <a class="item">Portfolio</a>

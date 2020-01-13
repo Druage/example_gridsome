@@ -34,6 +34,7 @@
         color: $primary-font-color;
         margin: 0;
         padding: 0;
+        text-decoration: none;
     }
 
     .home-links a {
