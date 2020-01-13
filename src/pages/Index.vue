@@ -1,14 +1,20 @@
 <template>
 
     <div>
+        <ul>
+            <li v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
+                <g-link :to="node.path">
+                    <h2 v-html="node.title"/>
+                </g-link>
+                <span v-html="node.date"/>
+                <div v-html="node.description"/>
+            </li>
+        </ul>
     </div>
 
 </template>
 
 <script>
-    import BlogPage from "../components/BlogPage";
-    import PageFooter from "../components/PageFooter";
-    import HeaderBar from "../components/HeaderBar";
 
     export default {
         metaInfo: {
@@ -17,16 +23,22 @@
     }
 </script>
 
+<page-query>
+    query Home ($page: Int) {
+        allBlogPost (page: $page) {
+            edges {
+                node {
+                    id
+                    title
+                    date (format: "D MMMM, YYYY")
+                    description
+                    path
+                }
+            }
+        }
+    }
+</page-query>
+
 <style lang="scss">
 
-    body {
-        color: $primary-font-color;
-    }
-
-    a {
-        color: $primary-font-color;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-    }
 </style>

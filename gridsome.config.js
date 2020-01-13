@@ -23,8 +23,19 @@ function addStyleResource (rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: [],
+  siteName: 'GHI Blog',
+  siteDescription: 'A blog for the site Generational Home Improvement (GHI)',
+  titleTemplate: `%s - GHI`,
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'blog/**/*.md',
+        typeName: 'BlogPost',
+        route: '/blog/:slug'
+      }
+    }
+  ],
   chainWebpack (config) {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

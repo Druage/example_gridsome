@@ -4,70 +4,21 @@
 
         <div class="blog-body">
 
-            <g-link class="BlogEntryPreview" to="/blog/article-one">
-                <img src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920-800x450.jpg"/>
-                <div class="preview-text-container">
+            <div class="BlogEntryPreview" v-for="{ node } in $page.allBlogPost.edges" :key="node.id">
 
-                    <div class="preview-heading">Article One</div>
+                <img :src="node.image" :alt="node.title"/>
+                <div class="preview-text-container">
+                    <div class="preview-heading">
+                        <router-link :to="node.path">{{node.title}}</router-link>
+                    </div>
                     <div class="preview-sub-heading">Sub heading saying something blah</div>
 
                     <p>
-                        asfaf asfaf asfaf asfaf asfaf asfaf asfaf
-                        asfaf asfaf asfaf
-                        asfaf asfaf asfaf
-                        asfaf asfaf asfaf asfaf asfaf asfaf asfaf asfaf asfaf
+                       {{node.description}}
                     </p>
 
                 </div>
-            </g-link>
-            <g-link class="BlogEntryPreview" to="/blog/article-one">
-                <img src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920-800x450.jpg"/>
-                <div class="preview-text-container">
-
-                    <div class="preview-heading">Article One</div>
-                    <div class="preview-sub-heading">Sub heading saying something blah</div>
-
-                    <p>
-                        asfaf asfaf asfaf asfaf asfaf asfaf asfaf
-                        asfaf asfaf asfaf
-                        asfaf asfaf asfaf
-                        asfaf asfaf asfaf asfaf asfaf asfaf asfaf asfaf asfaf
-                    </p>
-
-                </div>
-            </g-link>
-            <g-link class="BlogEntryPreview" to="/blog/article-one">
-                <img src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920-800x450.jpg"/>
-                <div class="preview-text-container">
-
-                    <div class="preview-heading">Article One</div>
-                    <div class="preview-sub-heading">Sub heading saying something blah</div>
-
-                    <p>
-                        asfaf asfaf asfaf asfaf asfaf asfaf asfaf
-                        asfaf asfaf asfaf
-                        asfaf asfaf asfaf
-                        asfaf asfaf asfaf asfaf asfaf asfaf asfaf asfaf asfaf
-                    </p>
-
-                </div>
-            </g-link>
-            <g-link class="BlogEntryPreview" to="/blog/article-one">
-                <img src="https://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-fast-speed-travel-ss-1920-800x450.jpg"/>
-                <div class="preview-text-container">
-
-                    <div class="preview-heading">Article One</div>
-                    <div class="preview-sub-heading">Sub heading saying something blah</div>
-
-                    <p>
-                        asfaf asfaf asfaf asfaf asfaf asfaf asfaf
-                        asfaf asfaf asfaf
-                        asfaf asfaf asfaf
-                        asfaf asfaf asfaf asfaf asfaf asfaf asfaf asfaf asfaf
-                    </p>
-
-                </div>
-            </g-link>
+            </div>
 
         </div>
 
@@ -86,6 +37,23 @@
         }
     }
 </script>
+
+<page-query>
+    query Home ($page: Int) {
+            allBlogPost (page: $page) {
+                edges {
+                    node {
+                        id
+                        title
+                        date (format: "D MMMM, YYYY")
+                        description
+                        path
+                        image
+                    }
+                }
+            }
+    }
+</page-query>
 
 <style lang="scss">
 
@@ -119,7 +87,6 @@
         height: 300px;
         margin: 64px 0;
         padding: 24px;
-        cursor: pointer;
         color: $primary-font-color;
         text-decoration: none;
 
