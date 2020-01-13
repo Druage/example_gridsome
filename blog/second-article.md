@@ -3,6 +3,9 @@ title: Second Article
 date: 2018-09-15 07:42:34
 description: "Sub heading blh blah blah blahasfsa afafa"
 image: "https://thehappypuppysite.com/wp-content/uploads/2017/10/Cute-Dog-Names-HP-long.jpg"
+tags: 
+    - hello
+    - dog
 slug: second
 ---
 

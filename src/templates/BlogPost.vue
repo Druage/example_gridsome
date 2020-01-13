@@ -42,13 +42,14 @@
 
 <page-query>
     query BlogPost ($path: String!) {
-    blogPost (path: $path) {
-    title
-    description
-    date (format: "D MMMM, YYYY")
-    content
-    image
-    }
+        blogPost (path: $path) {
+            title
+            description
+            date (format: "D MMMM, YYYY")
+            content
+            image
+            tags
+        }
     }
 </page-query>
 

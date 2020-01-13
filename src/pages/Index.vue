@@ -8,6 +8,7 @@
                 </g-link>
                 <span v-html="node.date"/>
                 <div v-html="node.description"/>
+                <div>{{node.tag}}</div>
             </li>
         </ul>
     </div>
@@ -32,6 +33,7 @@
                     title
                     date (format: "D MMMM, YYYY")
                     description
+                    tags
                     path
                 }
             }

@@ -3,6 +3,9 @@ title: First Article
 date: 2018-09-15 07:42:34
 description: "Sub heading blh blah blah blahasfsa afafa"
 image: "https://www.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg"
+tags: 
+    - cute
+    - more dogs
 slug: first
 ---
 
