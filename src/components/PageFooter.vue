@@ -28,6 +28,8 @@
         justify-content: flex-start;
         align-items: center;
 
+        color: $primary-font-color;
+
         @media only screen and (max-width: $mobile-width) {
             flex-direction: column;
         }
@@ -39,6 +41,11 @@
         max-width: $max-deskop-width;
         margin: 0 auto;
         border-top: 1px solid rgba(black, .1);
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
         .website-name {
             width: 60%;

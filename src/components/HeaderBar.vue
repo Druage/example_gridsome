@@ -70,6 +70,7 @@
                     justify-content: center;
 
                     margin-right: 12px;
+                    color: inherit;
 
                     &:last-of-type {
                         margin-right: 0;
