@@ -6,8 +6,8 @@
         <div class="blog-page">
 
             <div class="blog-heading">
-                <div class="main-heading">{{ $page.blogPost.title }}</div>
-                <div class="sub-heading">{{ $page.blogPost.description }}</div>
+                <div class="main-heading">{{$page.blogPost.title}}</div>
+                <div class="sub-heading">{{$page.blogPost.description}}</div>
             </div>
 
 

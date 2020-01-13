@@ -11,11 +11,7 @@
                     <div class="preview-heading">
                         <router-link :to="node.path">{{node.title}}</router-link>
                     </div>
-                    <div class="preview-sub-heading">Sub heading saying something blah</div>
-
-                    <p>
-                       {{node.description}}
-                    </p>
+                    <div class="preview-sub-heading"> {{node.description}}</div>
 
                 </div>
             </div>
