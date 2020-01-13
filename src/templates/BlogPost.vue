@@ -54,10 +54,6 @@
 
 <style lang="scss">
 
-    p {
-        line-height: 2rem;
-    }
-
     .blog-page {
         width: 100%;
         height: 100%;
@@ -92,6 +88,11 @@
             line-height: 2rem;
             max-width: 760px;
             margin: 0 auto;
+
+            p {
+                line-height: 2rem;
+            }
+
         }
     }
 
