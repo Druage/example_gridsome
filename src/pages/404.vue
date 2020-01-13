@@ -24,7 +24,10 @@
 
     export default {
         name: "404",
-        components: {PageFooter, HeaderBar}
+        components: {PageFooter, HeaderBar},
+        metaInfo: {
+            title: 'Page Not Found'
+        }
     }
 </script>
 

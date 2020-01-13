@@ -80,7 +80,10 @@
     import PageFooter from "../../components/PageFooter";
     export default {
         name: "Index",
-        components: {PageFooter, HeaderBar}
+        components: {PageFooter, HeaderBar},
+        metaInfo: {
+            title: 'Blog'
+        }
     }
 </script>
 
