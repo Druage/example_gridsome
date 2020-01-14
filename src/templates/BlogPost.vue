@@ -66,6 +66,8 @@
         img {
             width: 100%;
             height: unset;
+            max-height: 900px;
+            object-fit: contain;
             margin: 24px auto;
         }
 
