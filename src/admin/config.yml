@@ -1,5 +1,8 @@
 backend:
+  # Choose the backend you prefer (GitHub, GitLab, BitBucket)
+  # Reference: https://www.netlifycms.org/docs/authentication-backends/
   name: github
+  branch: master
   repo: Druage/example_gridsome
 
 media_folder: "static/uploads"
@@ -8,7 +11,7 @@ public_folder: "/uploads"
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "blog"
     create: true
     slug: "{{slug}}"
     fields:
