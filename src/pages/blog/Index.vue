@@ -80,7 +80,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 300px;
+        height: 320px;
         margin: 64px 0;
         padding: 24px;
         color: $primary-font-color;
@@ -92,7 +92,8 @@
 
         img {
             height: 100%;
-            width: auto;
+            width: 480px;
+            object-fit: cover;
         }
 
         .preview-text-container {
