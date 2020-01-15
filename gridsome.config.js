@@ -25,7 +25,7 @@ function addStyleResource (rule) {
 module.exports = {
   siteName: 'GHI Blog',
   siteDescription: 'A blog for the site Generational Home Improvement (GHI)',
-  titleTemplate: `%s - GHI`,
+  titleTemplate: `%s`,
   plugins: [
     {
       use: '@gridsome/source-filesystem',
