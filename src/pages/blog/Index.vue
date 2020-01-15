@@ -6,7 +6,9 @@
 
             <div class="BlogEntryPreview" v-for="{ node } in $page.allBlogPost.edges" :key="node.id">
 
-                <img :src="node.image" :alt="node.title"/>
+                <img v-if="node.image.length > 0" :src="node.image" :alt="node.title"/>
+                <font-awesome v-else class="no-img" :icon="['far', 'image']"/>
+
                 <div class="preview-text-container">
                     <div class="preview-heading">
                         <router-link :to="node.path">{{node.title}}</router-link>
@@ -94,6 +96,11 @@
             height: 100%;
             width: 480px;
             object-fit: cover;
+        }
+
+        .no-img {
+            height: 100%;
+            width: 480px;
         }
 
         .preview-text-container {

@@ -5,6 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { faImage } from '@fortawesome/free-regular-svg-icons'
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
@@ -12,7 +13,8 @@ config.autoAddCss = false;
 
 library.add(
     faInstagram,
-    faFacebook
+    faFacebook,
+    faImage
 );
 
 
