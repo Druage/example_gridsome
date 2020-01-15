@@ -4,15 +4,15 @@
         <div class="header-container">
 
             <a href="/blog">
-                <img src="@/assets/img/blog_logo.svg"/>
+                <img src="@/assets/img/blog_logo.svg" title="Generational Home Improvement - The Workers Blog"/>
             </a>
 
             <div class="social-links-container">
                 <a href="https://www.facebook.com/GenerationalExperts/" target="_blank">
-                    <font-awesome :icon="['fab', 'instagram']"/>
+                    <font-awesome :icon="['fab', 'instagram']" title="Visit our Instagram page"/>
                 </a>
                 <a href="https://www.instagram.com/generational.improvement/" target="_blank">
-                    <font-awesome :icon="['fab', 'facebook']"/>
+                    <font-awesome :icon="['fab', 'facebook']" title="Visit our Facebook page"/>
                 </a>
             </div>
 

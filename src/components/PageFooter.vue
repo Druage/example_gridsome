@@ -3,7 +3,7 @@
     <footer>
 
         <div class="website-name">
-            <a href="/blog">GHI</a>
+            <a href="/blog" title="GHI">GHI</a>
         </div>
         <a class="item">About</a>
         <a class="item">Portfolio</a>

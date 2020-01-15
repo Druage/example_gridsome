@@ -6,7 +6,7 @@
 
             <div class="BlogEntryPreview" v-for="{ node } in $page.allBlogPost.edges" :key="node.id">
 
-                <img v-if="node.image.length > 0" :src="node.image" :alt="node.title"/>
+                <img v-if="node.image.length > 0" :src="node.image" :alt="node.title" :title="node.title"/>
                 <font-awesome v-else class="no-img" :icon="['far', 'image']"/>
 
                 <div class="preview-text-container">
