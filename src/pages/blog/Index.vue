@@ -36,7 +36,7 @@
 
 <page-query>
     query Home ($page: Int) {
-            allBlogPost (page: $page, sortBy: "date", order: ASC) {
+            allBlogPost (page: $page, sortBy: "date", order: DESC) {
                 edges {
                     node {
                         id
