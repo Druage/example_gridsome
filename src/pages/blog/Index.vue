@@ -1,32 +1,37 @@
 <template>
-    <div class="Index">
-        <HeaderBar/>
+    <Layout class="Index">
 
         <div class="blog-body">
 
             <div class="BlogEntryPreview" v-for="{ node } in $page.allBlogPost.edges" :key="node.id">
 
-                <img v-if="node.image.length > 0" :src="node.image" :alt="node.title" :title="node.title"/>
-                <font-awesome v-else class="no-img" :icon="['far', 'image']"/>
+                <router-link :to="node.path">
+                    <div class="link-wrapper">
+                        <img v-if="node.image.length > 0" :src="node.image" :alt="node.title" :title="node.title"/>
+                        <font-awesome v-else class="no-img" :icon="['far', 'image']"/>
 
-                <div class="preview-text-container">
-                    <div class="preview-heading">
-                        <router-link :to="node.path">{{node.title}}</router-link>
+                        <div class="preview-text-container">
+                            <div class="preview-heading">
+                                {{node.title}}
+                            </div>
+                            <div class="preview-sub-heading"> {{node.description}}</div>
+
+                        </div>
                     </div>
-                    <div class="preview-sub-heading"> {{node.description}}</div>
 
-                </div>
+                </router-link>
+
+
             </div>
 
         </div>
-
-        <PageFooter/>
-    </div>
+    </Layout>
 </template>
 
 <script>
     import HeaderBar from "../../components/HeaderBar";
     import PageFooter from "../../components/PageFooter";
+
     export default {
         name: "Index",
         components: {PageFooter, HeaderBar},
@@ -38,33 +43,22 @@
 
 <page-query>
     query Home ($page: Int) {
-            allBlogPost (page: $page, sortBy: "date", order: DESC) {
-                edges {
-                    node {
-                        id
-                        title
-                        date (format: "D MMMM, YYYY")
-                        description
-                        path
-                        image
-                    }
+        allBlogPost (page: $page, sortBy: "date", order: DESC) {
+            edges {
+                node {
+                    id
+                    title
+                    date (format: "D MMMM, YYYY")
+                    description
+                    path
+                    image
                 }
             }
+        }
     }
 </page-query>
 
-<style lang="scss">
-
-    body {
-        color: $primary-font-color;
-    }
-
-    a {
-        color: $primary-font-color;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-    }
+<style scoped lang="scss">
 
     .Index {
         .blog-body {
@@ -79,50 +73,60 @@
     }
 
     .BlogEntryPreview {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 320px;
-        margin: 64px 0;
-        padding: 24px;
-        color: $primary-font-color;
-        text-decoration: none;
 
-        &:hover {
-            background-color: rgba(black, .05);
-        }
+        width: 100%;
 
-        img {
-            height: 100%;
-            width: 480px;
-            object-fit: cover;
-        }
-
-        .no-img {
-            height: 100%;
-            width: 480px;
-        }
-
-        .preview-text-container {
-            margin-left: 36px;
-            height: 100%;
-            width: 350px;
+        .link-wrapper {
+            width: 100%;
+            height: 320px;
 
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
+            align-items: center;
+            justify-content: center;
+            margin: 64px 0;
+            padding: 24px;
+            color: $primary-font-color;
+            text-decoration: none;
+            box-sizing: border-box;
 
-            .preview-heading {
-                font-size: 2rem;
-                font-weight: bold;
-                line-height: 2rem;
+            &:hover {
+                background-color: rgba(black, .05);
             }
 
-            .preview-sub-heading {
-                font-size: 1.2rem;
-                opacity: .54;
+            img {
+                height: 100%;
+                width: 480px;
+                object-fit: cover;
+            }
+
+            .no-img {
+                height: 100%;
+                width: 480px;
+            }
+
+            .preview-text-container {
+                margin-left: 36px;
+                height: 100%;
+                width: 350px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .preview-heading {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    line-height: 2rem;
+                }
+
+                .preview-sub-heading {
+                    font-size: 1.2rem;
+                    opacity: .54;
+                }
             }
         }
+
+
     }
 </style>
