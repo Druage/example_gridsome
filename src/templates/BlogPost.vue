@@ -10,7 +10,6 @@
                 <div class="sub-heading">{{$page.blogPost.description}}</div>
             </div>
 
-
             <img :src="$page.blogPost.image"/>
 
             <div class="blog-content" v-html="$page.blogPost.content"></div>
@@ -34,6 +33,16 @@
         metaInfo() {
             return {
                 title: this.$page.blogPost.title
+            }
+        },
+
+        methods: {
+            formattedTag(tag, index) {
+                if (index === this.$page.blogPost.tags.length - 1) {
+                    return tag;
+                }
+
+                return tag + ',';
             }
         }
     }
@@ -85,6 +94,12 @@
                 font-size: 1.5rem;
                 opacity: .54;
             }
+        }
+
+        .tag-container {
+            padding-bottom: 24px;
+            max-width: 760px;
+            margin: 0 auto;
         }
 
         .blog-content {
