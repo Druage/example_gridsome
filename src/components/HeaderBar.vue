@@ -4,7 +4,7 @@
         <div class="header-container">
 
             <a href="/blog">
-                <img src="@/assets/img/blog_logo.svg" title="Generational Home Improvement - The Workers Blog"/>
+                <img src="@/assets/img/blog_logo.svg" title="Generational Home Improvement - The Workers Blog" alt="Generational Home Improvement - The Workers Blog Logo"/>
             </a>
 
             <div class="social-links-container">
