@@ -7,7 +7,7 @@
 
                 <router-link :to="node.path">
                     <div class="link-wrapper">
-                        <img v-if="node.image.length > 0" :src="node.image" :alt="node.title" :title="node.title"/>
+                        <img v-if="node.image && node.image.length > 0" :src="node.image" :alt="node.title" :title="node.title"/>
                         <font-awesome v-else class="no-img" :icon="['far', 'image']"/>
 
                         <div class="preview-text-container">
